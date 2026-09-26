@@ -122,7 +122,7 @@ hl.device({
 --------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
+-- and https://wiki.hypr.land/Configsdfdsfdsuring/Basics/Workspace-Rules/
 
 -- Example window rules that are useful
 
