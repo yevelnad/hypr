@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local menu        = "hyprlauncher"
 local browser     = "google-chrome-stable"
 
@@ -16,18 +16,22 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("zeditor"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("spotify"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("resources"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("zeditor ~/.config/hypr"))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + END", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("noctalia msg panel-toggle launcher"))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("noctalia msg settings-toggle"))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("spotify"))
-hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("zeditor ~/.config/hypr"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zeditor"))
+
+
+
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("noctalia msg plugin yngwe/wallpaperCarousel:service all toggle"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind(mainMod .. " + W", hl.dsp.window.fullscreen({mode = "maximized"}))

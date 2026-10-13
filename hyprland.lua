@@ -20,6 +20,7 @@
 require("modules.keybinds")
 require("modules.monitors")
 require("modules.animations")
+require("modules.windowrules")
 
 
 
@@ -122,7 +123,7 @@ hl.device({
 --------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configsdfdsfdsuring/Basics/Workspace-Rules/
+-- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
 -- Example window rules that are useful
 
@@ -157,12 +158,3 @@ hl.window_rule({
 --     no_anim = true,
 -- })
 -- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
-hl.window_rule({
-    name  = "move-hyprland-run",
-    match = { class = "hyprland-run" },
-
-    move  = "20 monitor_h-120",
-    float = true,
-})
