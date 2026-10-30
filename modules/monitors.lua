@@ -8,4 +8,7 @@ hl.monitor({
     mode     = "highres",
     position = "auto",
     scale    = "auto",
+    bitdepth = 10,
+    cm = "auto",
+    vrr = 0
 })

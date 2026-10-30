@@ -94,3 +94,21 @@ hl.window_rule({
     match = { class = "^(org.gnome.Resources)$" },
     float = true,
 })
+
+hl.window_rule({
+    name = "move-dota2",
+    match = { class = "^(dota2)$" },
+    workspace = "5",
+})
+
+hl.window_rule({
+    name = "move-path_of_exile",
+    match = { class = "^(steam_app_238960)$" },
+    workspace = "5",
+})
+
+hl.window_rule({
+    name = "move-brave",
+    match = { class = "^(brave-origin)$" },
+    workspace = "special:magic",
+})
